@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry</title>
+    <!--  Slick CDN  -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!--  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="top">
+    <!-- 導覽列 -->
+    <nav id="navigation">
+        <div>
+            <a href="./index.html" class="logo">{Jerry}</a>
+        </div>
+        <img src="./img/icon-menu.png" alt="選單" id="menu">
+        <div class="link">
+            <a href="./about/">關於我</a>
+            <a href="./works/">作品集</a>
+            <a href="./contact/">聯絡我</a>
+        </div>
+        <div class="social">
+            <a href=""><img src="./img/icon-youtube.png" alt="YOUTUBE"></a>
+            <a href=""><img src="./img/icon-github.png" alt="Git Hub"></a>
+            <a href=""><img src="./img/icon-facebook.png" alt="Facebook"></a>
+            <a href=""><img src="./img/icon-email.png" alt="E-Mail"></a>
+        </div>
+    </nav>
+
+    <!-- 橫幅 -->
+    <section id="banner">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅1&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅2&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅3&font=noto">
+        <img src="https://fakeimg.pl/1280x720/?retina=1&text=橫幅4&font=noto">
+    </section>
+
+    <!-- 關於我 -->
+    <section id="about">
+        <h1 class="title">關於我</h1>
+        <h2 data-aos="flip-right" data-aos-offset="400" data-aos-delay="100" data-aos-mirror="true"
+            data-aos-once="false">{Jerry}</h2>
+        <p>嗨，我是一位開發者，主要開發遊戲、網頁，也會創作插畫。 </p>
+        <a href="" class="button-box">關於我</a>
+    </section>
+
+    <!-- 作品集 -->
+    <section id="work">
+        <h1 class="title">作品集</h1>
+        <div id="work-box">
+            <div class="work-box-smill" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="200">
+                <img src="" alt="">
+                <span>類別</span>
+                <h2>作品名稱</h2>
+            </div>
+            <div class="work-box-smill" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="600">
+                <img src="" alt="">
+                <span>類別</span>
+                <h2>作品名稱</h2>
+            </div>
+            <div class="work-box-smill" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="800">
+                <img src="" alt="">
+                <span>類別</span>
+                <h2>作品名稱</h2>
+            </div>
+            <div class="work-box-smill" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="200">
+                <img src="" alt="">
+                <span>類別</span>
+                <h2>作品名稱</h2>
+            </div>
+            <div class="work-box-smill" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="600">
+                <img src="" alt="">
+                <span>類別</span>
+                <h2>作品名稱</h2>
+            </div>
+            <div class="work-box-smill" data-aos="zoom-in" data-aos-offset="200" data-aos-duration="800">
+                <img src="" alt="">
+                <span>類別</span>
+                <h2>作品名稱</h2>
+            </div>
+        </div>
+        <div class="button-div">
+            <a href="" class="button-box">作品集</a>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <a href="./index.html" class="logo">{Jerry}</a>
+        </div>
+        <div class="social">
+            <a href=""><img src="./img/icon-youtube.png" alt="YOUTUBE"></a>
+            <a href=""><img src="./img/icon-github.png" alt="Git Hub"></a>
+            <a href=""><img src="./img/icon-facebook.png" alt="Facebook"></a>
+            <a href=""><img src="./img/icon-email.png" alt="E-Mail"></a>
+        </div>
+        <div class="link">
+            <a href="">關於我</a>
+            <a href="">作品集</a>
+            <a href="">聯絡我</a>
+        </div>
+        <div id="copyright">
+            Copyright &copy; 2010 - 2020 <span class="logo-small">{Jerry}</span> All rights reserved
+        </div>
+    </footer>
+    <!-- 回到頂端的按鈕 data-gte-target指定回到的目標、data-gte-offset回到目標後目標位移多少-->
+    <img src="./img/arrow.png" alt="返回項端" id="arrow" data-gte-target="top" data-gte-offset="0">
+    <!-- 前往指定元素 CDN -->
+    <script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+    <!--  jQuery CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--  Slick CDN  -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--  js  -->
+    <script>
+        // 啟動輪播效果
+        $("#banner").slick({
+            dots: true,
+            dotsClass: "slick-dots dots",
+            speed: 1000
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+
+</html>

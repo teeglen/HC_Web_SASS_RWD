@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerry | 關於我</title>
+    <!--  Slick CDN  -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <!--  -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="top">
+    <!-- 導覽列 -->
+    <nav id="navigation">
+        <div>
+            <a href="../" class="logo">{Jerry}</a>
+        </div>
+        <img src="./img/icon-menu.png" alt="選單" id="menu">
+        <div class="link">
+            <a href="../about/">關於我</a>
+            <a href="../works/">作品集</a>
+            <a href="../contact/">聯絡我</a>
+        </div>
+        <div class="social">
+            <a href=""><img src="../img/icon-youtube.png" alt="YOUTUBE"></a>
+            <a href=""><img src="../img/icon-github.png" alt="Git Hub"></a>
+            <a href=""><img src="../img/icon-facebook.png" alt="Facebook"></a>
+            <a href=""><img src="../img/icon-email.png" alt="E-Mail"></a>
+        </div>
+    </nav>
+
+   <h1>關於我</h1>
+   <h1>關於我</h1>
+   <h1>關於我</h1>
+
+    
+    <footer>
+        <div>
+            <a href="../" class="logo">{Jerry}</a>
+        </div>
+        <div class="social">
+            <a href=""><img src="../img/icon-youtube.png" alt="YOUTUBE"></a>
+            <a href=""><img src="../img/icon-github.png" alt="Git Hub"></a>
+            <a href=""><img src="../img/icon-facebook.png" alt="Facebook"></a>
+            <a href=""><img src="../img/icon-email.png" alt="E-Mail"></a>
+        </div>
+        <div class="link">
+            <a href="../about/">關於我</a>
+            <a href="../works/">作品集</a>
+            <a href="../contact/">聯絡我</a>
+        </div>
+        <div id="copyright">
+            Copyright &copy; 2010 - 2020 <span class="logo-small">{Jerry}</span> All rights reserved
+        </div>
+    </footer>
+    <!-- 回到頂端的按鈕 data-gte-target指定回到的目標、data-gte-offset回到目標後目標位移多少-->
+    <img src="../img/arrow.png" alt="返回項端" id="arrow" data-gte-target="top" data-gte-offset="0">
+    <!-- 前往指定元素 CDN -->
+    <script src="https://kid421.github.io/Web_JavaScript_GoToElement/goToElement.js"></script>
+    <!--  jQuery CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--  Slick CDN  -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!--  js  -->
+    <script>
+        // 啟動輪播效果
+        $("#banner").slick({
+            dots: true,
+            dotsClass: "slick-dots dots",
+            speed: 1000
+        });
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

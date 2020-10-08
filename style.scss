@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+// 主色與次要色
+$color-main: #252525;
+$color-sub: #6eb3ff;
+$color-bg-gray: #f9f9f9;
+$color-while: #cdcdcd;
+
+// 文字大小：最大
+$font-size-big: 36px;
+// 字體
+$font-family-main: "Bebas Neue", cursive;
+// RWD：桌機、平板、手機
+$desktop:1025px;
+$table:1024px;
+$mobile:767px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 微軟正黑體;
+    color: $color-main;
+}
+
+// 導覽列
+#navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px 120px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    // 固定：寬度會跑掉
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 10;
+
+    @media screen and (min-width: $desktop) {
+        grid-template-areas: "logo link social";       
+    }
+    // 平板
+    @media screen and (max-width:$table){
+       grid-template-areas: "logo social menu"; 
+    }
+    // 手機
+    @media screen and (max-width:$mobile){
+        .logo{
+            font-size: 32px;
+        }
+        padding: 10px 6px;
+           }
+}
+// menu
+#menu {
+    grid-area: menu;
+    @media screen and (min-width: $desktop) {
+        display: none;        
+    }
+    @media screen and (max-width: $table) {
+        display: block; 
+        margin-left: auto;       
+    }
+    @media screen and (max-width:$mobile){
+        width: 32px;
+     }
+
+}
+.logo {
+    font-family: $font-family-main;
+    font-size: 42px;
+    text-decoration: none;
+    transition: 0.3s;
+    letter-spacing: 2px;
+    grid-area: logo;
+    &:hover {color: $color-sub;}   
+}
+
+.link {
+    text-align: center;
+    grid-area: link;
+    a {
+        text-decoration: none;
+        padding: 30px 30px 30px 40px;
+        transition: 0.3s;
+        letter-spacing: 10px;
+
+        &:hover {
+            color: $color-sub;
+        }
+    }
+    //平板
+    @media screen and  (max-width:$table){
+        display: none;
+    }
+}
+
+.social {
+    text-align: right;
+    grid-area: social;
+    img {
+        filter: invert(9%) sepia(11%) saturate(6%) hue-rotate(336deg) brightness(100%) contrast(86%);
+        transition: 0.2s;
+        width: 32px;
+        margin-left: 30px;
+
+        &:hover {
+            filter: invert(63%) sepia(8%) saturate(2974%) hue-rotate(177deg) brightness(105%) contrast(102%);
+        }
+        // 手機
+        @media screen and (max-width:$mobile){
+            margin-left: 0;
+            width: 24px;
+        }
+    }
+}
+
+// 橫幅
+#banner {
+    width: 100%;
+    height: 100vh;
+    background: #eee;
+    overflow: hidden;
+
+    .dots {
+        bottom: 80px;
+    }
+    // 平板
+    @media screen and (max-width:$table){
+         height: 100%;
+         .slick-track{
+             height:900px
+         }
+        //  物件適應：自動調整圖片長寬比
+         img {
+             object-fit: cover;
+         }
+     }
+     // 手機
+     @media screen and (max-width:$mobile){
+        .slick-track{
+            height: 500px;
+        }
+     }
+}
+
+// 關於我
+#about {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+
+    h2 {
+        font-size: 420px;
+        font-family: $font-family-main;
+        letter-spacing: 30px;
+        padding-left: 30px;
+        margin-top: 50px;
+        @media screen and (max-width:$table){
+           font-size: 180px;
+        }
+        @media screen and (max-width:$mobile){
+            font-size: 64px;
+            letter-spacing: 10px;
+            padding-left: 10px;
+            margin-top: 100px;
+         }
+    }
+
+    p {
+        padding: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+// 標題
+.title {
+    font-size: $font-size-big;
+    padding: 50px;
+    text-align: center;
+}
+
+// 按鈕：盒型
+.button-box {
+    padding: 10px 60px;
+    border: 2px solid $color-main;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+        background: $color-main;
+        color: white;
+    }
+}
+//按鈕外的區塊
+.button-div {
+    text-align: center;
+    margin-top: 40px;
+}
+// 作品集
+#work {
+    height: 100vh;
+    background: $color-bg-gray;
+    // 平板
+    @media screen and (max-width:$table){
+        height: auto;
+        padding-bottom: 100px;
+    }
+    // 手機
+    @media screen and (max-width:$mobile){
+        height: auto;
+        padding-bottom: 100px;
+     }
+    #work-box {
+        width: 1200px;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px 25px;
+        
+        //平板
+        @media screen and (max-width:$table){
+            width: 100%;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 0 30px;
+        }
+        // 手機
+        @media screen and (max-width:$mobile){
+            grid-template-columns: repeat(1, 1fr);
+         }
+
+        .work-box-smill {
+            img {
+                display: block;
+                width: 100%;
+                height: 300px;
+                background: #000;
+            }
+            h2 {
+                text-align: center;
+                transform: translateY(-30px);
+            }
+            span {
+                display: inline-block;
+                border: 1px solid #000;
+                // 格線圓角
+                border-radius: 15px;
+                padding: 5px 10px;
+                font-size: 12px;
+                margin-top: 5px;
+            }
+        }
+    }
+}
+// footer
+footer {
+    background: #000;
+    padding: 90px 0;
+    text-align: center;
+    .logo{
+        
+    }
+    .social{
+        margin: 10px 0;
+        text-align: center;
+    }
+    #copyright {
+        color: $color-white;
+        font-size: 8px;
+        margin-top: 50px;
+    }
+}
+#arrow{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background:#333;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+}
