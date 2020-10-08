@@ -176,7 +176,7 @@ $mobile:767px;
 // 標題
 .title {
     font-size: $font-size-big;
-    padding: 50px;
+    padding: 30px;
     text-align: center;
 }
 
@@ -195,11 +195,11 @@ $mobile:767px;
 //按鈕外的區塊
 .button-div {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 // 作品集
 #work {
-    height: 100vh;
+    height: 960px;
     background: $color-bg-gray;
     // 平板
     @media screen and (max-width:$table){

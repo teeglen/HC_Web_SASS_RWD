@@ -199,7 +199,7 @@
 
 .title {
   font-size: 36px;
-  padding: 50px;
+  padding: 30px;
   text-align: center;
 }
 
@@ -218,11 +218,11 @@
 
 .button-div {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 #work {
-  height: 100vh;
+  height: 960px;
   background: #f9f9f9;
 }
 
